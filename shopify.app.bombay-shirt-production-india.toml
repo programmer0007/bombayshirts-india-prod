@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Bombay Shirt Production India"
+client_id = "4d6e577aa245968c20d5699964cdd382"
+application_url = "https://shopify-in-proxy.bombayshirts.com/shopify-proxy/admin/auth_in"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_discounts,read_discounts"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://shopify-in-proxy.bombayshirts.com/shopify-proxy/admin/redirect_in",
+  "https://dddemo.net/php/2023/bombayshirtstage/generate_token.php"
+]
+
+[webhooks]
+api_version = "2021-01"
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "store-for-extensions.myshopify.com"

@@ -1,0 +1,24 @@
+api_version = "2023-10"
+
+[[extensions]]
+handle = "product-discount"
+name = "automatic-product-discount"
+description = "product discount extensions"
+type = "function"
+
+  [[extensions.targeting]]
+  target = "purchase.product-discount.run"
+  input_query = "src/run.graphql"
+  export = "run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+
+  [extensions.ui.paths]
+  create = "/"
+  details = "/"
+
+[input.variables]
+namespace = "product-discount"
+key = "function-configuration"

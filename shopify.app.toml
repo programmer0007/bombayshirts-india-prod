@@ -1,0 +1,21 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "bombay-shirt-live"
+client_id = "a22d95e32dbd4511c063c6f160144016"
+application_url = "https://shopify.dev/apps/default-app-home"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_discounts,read_discounts"
+
+[auth]
+redirect_urls = [
+  "https://dddemo.net/php/2023/bombayshirtstage/generate_token.php"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
